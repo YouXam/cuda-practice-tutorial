@@ -85,21 +85,63 @@ We can treat these blocks like individual numbers. The top-left block $C_{0,0}$ 
 
 For instance,
 
-$$A=\begin{bmatrix} 1 & 2 & 5 & 6 \\ 3 & 4 & 7 & 8 \\ 9 & 10 & 13 & 14 \\ 11 & 12 & 15 & 16 \end{bmatrix}, \quad B=\begin{bmatrix} 1 & 0 & 1 & 1 \\ 0 & 1 & 0 & 0 \\ 1 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{bmatrix}$$
+$$
+A=\begin{bmatrix}
+1 & 2 & 5 & 6 \\
+3 & 4 & 7 & 8 \\
+9 & 10 & 13 & 14 \\
+11 & 12 & 15 & 16
+\end{bmatrix}, \quad B=\begin{bmatrix}
+1 & 0 & 1 & 1 \\
+0 & 1 & 0 & 0 \\
+1 & 1 & 0 & 1 \\
+0 & 0 & 1 & 0
+\end{bmatrix}
+$$
 
 Then
 
-$$C = A \times B = \begin{bmatrix} 6 & 7 & 7 & 6 \\ 10 & 11 & 11 & 10 \\ 22 & 23 & 23 & 22 \\ 26 & 27 & 27 & 26 \end{bmatrix} $$
+$$C = A \times B = \begin{bmatrix} 6 & 7 & 7 & 6 \\
+10 & 11 & 11 & 10 \\
+22 & 23 & 23 & 22 \\
+26 & 27 & 27 & 26 \end{bmatrix} $$
 
 Now let's compute $C_{0,0}$ using the tiling approach:
 
-$A_{00} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$, $B_{00} = \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}$, so $$A_{00} \times B_{00} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \times \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$$
+$$
+A_{00} = \begin{bmatrix}
+1 & 2 \\
+3 & 4
+\end{bmatrix}, \quad B_{00} = \begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}
+$$
 
-$A_{01} = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix}$, $B_{10} = \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix}$, so $$A_{01} \times B_{10} = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix} \times \begin{bmatrix} 1 & 1 \\ 0 & 0 \end{bmatrix} = \begin{bmatrix} 5 & 5 \\ 7 & 7 \end{bmatrix}$$
+so
+
+$$A_{00} \times B_{00} = \begin{bmatrix} 1 & 2 \\
+3 & 4 \end{bmatrix} \times \begin{bmatrix} 1 & 0 \\
+0 & 1 \end{bmatrix} = \begin{bmatrix} 1 & 2 \\
+3 & 4 \end{bmatrix}$$
+
+$$A_{01} = \begin{bmatrix} 5 & 6 \\
+7 & 8 \end{bmatrix}, \quad B_{10} = \begin{bmatrix} 1 & 1 \\
+0 & 0 \end{bmatrix}$$
+
+so
+
+$$A_{01} \times B_{10} = \begin{bmatrix} 5 & 6 \\
+7 & 8 \end{bmatrix} \times \begin{bmatrix} 1 & 1 \\
+0 & 0 \end{bmatrix} = \begin{bmatrix} 5 & 5 \\
+7 & 7 \end{bmatrix}$$
 
 Finally:
 
-$$C_{00} = A_{00} \times B_{00} + A_{01} \times B_{10} = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} + \begin{bmatrix} 5 & 5 \\ 7 & 7 \end{bmatrix} = \begin{bmatrix} 6 & 7 \\ 10 & 11 \end{bmatrix}$$
+$$C_{00} = A_{00} \times B_{00} + A_{01} \times B_{10} = \begin{bmatrix} 1 & 2 \\
+3 & 4 \end{bmatrix} + \begin{bmatrix} 5 & 5 \\
+7 & 7 \end{bmatrix} = \begin{bmatrix} 6 & 7 \\
+10 & 11 \end{bmatrix}$$
 
 This is not a coincidence but a beautiful property of matrix multiplication: it maintains consistency at any level.
 

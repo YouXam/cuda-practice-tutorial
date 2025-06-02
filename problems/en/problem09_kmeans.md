@@ -1,4 +1,4 @@
-# Problem 10: K-Means Clustering
+# Problem 9: K-Means Clustering
 
 K-Means is a classical clustering algorithm in machine learning, captivating researchers with its elegant simplicity and remarkable versatility. Despite being decades old, K-Means remains an indispensable tool in the data science toolkit.
 
