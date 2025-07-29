@@ -136,7 +136,7 @@ CPU vs. GPU
 
 ## CPU vs. GPU 架构示意图
 
-![](https://cvw.cac.cornell.edu/gpu-architecture/gpu-characteristics/ArchCPUGPUcores.png)
+![](/cpugpu.png)
 
 ---
 
@@ -147,7 +147,7 @@ NVIDIA Hopper 架构图，展示了 GPC (大框) 和 SM (小框) 的层次结构
 </div>
 
 
-![](https://developer-blogs.nvidia.com/wp-content/uploads/2022/03/Full-H100-GPU-with-144-SMs.png)
+![](/hopper.png)
 
 
 ---
